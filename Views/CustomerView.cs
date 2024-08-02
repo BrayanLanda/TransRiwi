@@ -15,7 +15,8 @@ namespace TransRiwi.Views
             Console.WriteLine("2. Agregar cliente");
             Console.WriteLine("3. Eliminar cliente");
             Console.WriteLine("4. Buscar cliente");
-            Console.WriteLine("5. Volver al menú principal");
+            Console.WriteLine("5. Editar cliente");
+            Console.WriteLine("6. Volver al menú principal");
             int option;
             while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 5)
             {

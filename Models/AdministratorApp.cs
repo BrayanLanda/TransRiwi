@@ -29,7 +29,14 @@ namespace TransRiwi.Models
         //Metodos para eliminar
         public void RemoveCustomer(Customer customer)
         {
-            customers.Remove(customer);
+            if (customers.Contains(customer))
+            {
+                customers.Remove(customer);
+            }
+            else
+            {
+                System.Console.WriteLine("Cliente no encontrado.");
+            }
         }
         public void RemoveDriver(Driver driver)
         {
@@ -39,6 +46,19 @@ namespace TransRiwi.Models
         {
             vehicles.Remove(vehicle);
         }
+
+        // //Metodos para editar
+        // public void EditCustomer(Customer customer)
+        // {
+        //     if (customers.Contains(customer))
+        //     {
+        //         customers.Remove(customer);
+        //     }
+        //     else
+        //     {
+        //         System.Console.WriteLine("Cliente no encontrado.");
+        //     }
+        // }
 
         //Metodos para mostrar 
         public void ShowCustomers()
@@ -64,7 +84,7 @@ namespace TransRiwi.Models
         }
 
         //Metodos para buscar
-        public Customer FindCustomerById(Guid id)
+        public Customer GetCustomerById(Guid id)
         {
             return customers.FirstOrDefault(c => c.GetId() == id);
         }
