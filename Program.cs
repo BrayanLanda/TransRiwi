@@ -1,2 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using TransRiwi.Controllers;
+
+MainController main = new MainController();
+main.Run();

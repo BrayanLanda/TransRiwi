@@ -8,7 +8,7 @@ namespace TransRiwi.Views
     public class MainView
     {
         //Vista principal
-        public void ShowMenu()
+        public int ShowMenu()
         {
             Console.WriteLine("==== TransRiwi ====");
             Console.WriteLine("1. Gestionar Clientes");
@@ -16,11 +16,13 @@ namespace TransRiwi.Views
             Console.WriteLine("3. Gestionar Conductores");
             Console.WriteLine("4. Gestionar Consultas");
             Console.WriteLine("5. Salir");
+            Console.Write("Elija una opcion: ");
             int option;
             while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 5)
             {
                 System.Console.Write("Opcion invalida, intenta de nuevo: ");
             }
+            return option;
         }
 
         //Solicitar un id para editar o eliminar
