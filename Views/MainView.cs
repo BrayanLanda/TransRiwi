@@ -10,6 +10,7 @@ namespace TransRiwi.Views
         //Vista principal
         public int ShowMenu()
         {
+            Console.Clear();
             Console.WriteLine("==== TransRiwi ====");
             Console.WriteLine("1. Gestionar Clientes");
             Console.WriteLine("2. Gestionar Vehículos");

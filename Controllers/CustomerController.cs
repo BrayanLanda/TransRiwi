@@ -15,7 +15,8 @@ namespace TransRiwi.Controllers
 
         public void ManageCustomer()
         {
-            while (true)
+            bool back = false;
+            while (!back)
             {
                 int option = customerView.ShowCustomerMenu();
 
@@ -37,7 +38,8 @@ namespace TransRiwi.Controllers
                         EditCustomer();
                         break;
                     case 6:
-                        return;
+                        back = true;
+                        break;
                     default:
                         mainView.ShowMessage("Opcion invalida.");
                         break;
@@ -58,6 +60,7 @@ namespace TransRiwi.Controllers
         {
             Customer customer = customerView.GetCustomerInfo();
             _app.AddCustomer(customer);
+            System.Console.WriteLine("------------------------");
             mainView.ShowMessage("Cliente agregado exitosamente.");
         }
 

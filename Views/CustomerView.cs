@@ -11,6 +11,8 @@ namespace TransRiwi.Views
     {
         public int ShowCustomerMenu()
         {
+            Console.Clear();
+            Console.WriteLine("==== Clientes ====");
             Console.WriteLine("1. Mostrar clientes");
             Console.WriteLine("2. Agregar cliente");
             Console.WriteLine("3. Eliminar cliente");
@@ -18,7 +20,7 @@ namespace TransRiwi.Views
             Console.WriteLine("5. Editar cliente");
             Console.WriteLine("6. Volver al menú principal");
             int option;
-            while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 5)
+            while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 6)
             {
                 System.Console.Write("Opcion invalida, Intenta de nuevo: ");
             }
