@@ -84,12 +84,16 @@ namespace TransRiwi.Controllers
         // Buscar un cliente por id
         private void SearchCustomer()
         {
-            Guid id = mainView.GetIdForAction("buscar");
+            Guid id = mainView.GetIdForAction("Buscar");
             Customer customer = _app.GetCustomerById(id); // Usar el método de AdministradorApp para obtener el cliente
 
             if (customer != null)
             {
-                _app.GetCustomerById(id);
+                System.Console.WriteLine($"Cliente encontrado: {customer.GetName()} {customer.GetLastName()}");
+                System.Console.WriteLine($"Documentyo: {customer.GetTypeDocument()}-{customer.GetIdentificationNumber()}");
+                System.Console.WriteLine($"Cliente encontrado: {customer.GetEmail()}");
+                System.Console.WriteLine($"Cliente encontrado: {customer.GetPhoneNumber()}");
+                System.Console.WriteLine("Cliente Encontrado con exito");
             }
             else
             {

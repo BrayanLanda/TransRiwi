@@ -18,9 +18,9 @@ namespace TransRiwi.Models
         }
 
         //Metodo para mostrar detalles
-        protected override void ShowDetails()
+        public override void SetShowDetails()
         {
-            base.ShowDetails();
+            base.SetShowDetails();
             Console.WriteLine($"Nivel de Membresía: {MembershipLevel}");
             Console.WriteLine($"Método de Pago Preferido: {PreferredPaymentMethod}");
         }

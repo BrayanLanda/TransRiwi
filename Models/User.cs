@@ -47,7 +47,7 @@ namespace TransRiwi.Models
         }
 
         //Metodo para mostrar los dellates en las demas clases
-        public void SetShowDetails()
+        public virtual void SetShowDetails()
         {
             ShowDetails();
         }
