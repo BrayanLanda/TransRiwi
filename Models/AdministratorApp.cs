@@ -78,7 +78,7 @@ namespace TransRiwi.Models
         {
             foreach (var vehicle in vehicles)
             {
-                //vehicle.SetShowDetails();
+                vehicle.ShowDetails();
             }
         }
 
@@ -91,9 +91,9 @@ namespace TransRiwi.Models
         {
             return drivers.FirstOrDefault(d => d.GetId() == id);
         }
-        // public Vehicle FindVehicleById(Guid id)
-        // {
-        //     return//vehicles.FirstOrDefault(v => v.GetId() == id);
-        // }
+        public Vehicle FindVehicleById(int id)
+        {
+            return vehicles.FirstOrDefault(v => v.Id == id);
+        }
     }
 }

@@ -38,6 +38,17 @@ namespace TransRiwi.Views
             return id;
         }
 
+         public int GetIdIntForAction(string action)
+        {
+            System.Console.Write($"Ingresa el id del registro a {action}: ");
+            int id;
+            while (!int.TryParse(Console.ReadLine(), out id))
+            {
+                Console.Write("Id invalido. Intente de nuevo: ");
+            }
+            return id;
+        }
+
         //Monstrar mensaje y esperar confirmacion del usuario
         public void ShowMessage(string mensaje)
         {
